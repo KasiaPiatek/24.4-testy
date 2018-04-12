@@ -1,6 +1,17 @@
-const formatDate = (timeInSeconds) => {
+/*const formatDate = (timeInSeconds) => {
   return `${timeInSeconds}s`;
 }
+*/
+
+function formatDate(timeInSeconds){
+            conts hours;
+            const minutes;
+            const seconds;
+            hours = Math.floor(timeInSeconds/3600);
+            minutes = Math.floor((timeInSeconds % 3600) / 60);
+            seconds = Math.floor(timeInSeconds % 60);
+
+            }
 
 module.exports = formatDate;
 
