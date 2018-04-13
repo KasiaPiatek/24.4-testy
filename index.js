@@ -4,14 +4,28 @@
 */
 
 function formatDate(timeInSeconds){
-            conts hours;
-            const minutes;
-            const seconds;
-            hours = Math.floor(timeInSeconds/3600);
-            minutes = Math.floor((timeInSeconds % 3600) / 60);
-            seconds = Math.floor(timeInSeconds % 60);
 
+            const hours = Math.floor(timeInSeconds/3600);
+            const minutes = Math.floor((timeInSeconds % 3600) / 60);
+            const seconds = Math.floor(timeInSeconds % 60);
+
+            let result = '';
+
+            if (hours!=0){
+       			result = result + hours + 'h ';
             }
+            if (minutes!=0) {
+            	result = result + minutes + 'm ';
+            }
+            if (seconds!=0) {
+            	result = result + seconds + 's ';
+            }
+            return result;
+           
+           }
+
+
+
 
 module.exports = formatDate;
 
